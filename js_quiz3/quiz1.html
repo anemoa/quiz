@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
     <style>
       * {
         font-family: 'Noto Sans KR', sans-serif;
@@ -44,6 +43,23 @@
         font-weight: 700;
       }
     </style>
+    <script>
+      let x = 2;
+      switch(x){
+        case 1:
+        case 2:
+          console.log('a');
+          console.log('b');
+        case 3:
+          console.log('c');
+          break;
+          case 4:
+            console.log('d');
+            break;
+          default:
+            console.log('f');
+      }
+    </script>
   </head>
   <body>
     <h1>Javascript Quiz</h1>
@@ -57,7 +73,7 @@
       출력하는 코드로 옳은 것은? (gender 변수는 이미 선언되어 있다고 가정)
     </h2>
     <ol>
-      <li><code>console.log(gender == 0 : '남자' ? '여자');</code></li>
+      <li class="check"><code>console.log(gender == 0 : '남자' ? '여자');</code></li>
       <li><code>console.log(gender == 0 ? '남자' : '여자');</code></li>
       <li><code>console.log(gender == 0 : '여자' ? '남자');</code></li>
       <li><code>console.log(gender == 0 ? '여자' : '남자');</code></li>
@@ -74,7 +90,7 @@
       <li>
         <code>b<br />c</code>
       </li>
-      <li>
+      <li class="check">
         <code>a<br />b<br />c</code>
       </li>
       <li><code>f</code></li>
@@ -84,7 +100,7 @@
     <h2>Q. 다음 중 while 반복문의 시작을 올바르게 작성한 것은?</h2>
     <ol>
       <li><code>while (i <> 7)</code></li>
-      <li><code>while (i !== 7)</code></li>
+      <li class="check"><code>while (i !== 7)</code></li>
       <li><code>while (i =! 5) then</code></li>
       <li><code>while i != 7:</code></li>
     </ol>
@@ -95,7 +111,7 @@
       <li><code>for i = 1 to 5</code></li>
       <li><code>for (i <= 5; i++)</code></li>
       <li><code>for (i = 0; i <= 5)</code></li>
-      <li><code>for (i = 0; i = 5; i++)</code></li>
+      <li class="check"><code>for (i = 0; i = 5; i++)</code></li>
     </ol>
     <hr />
   </body>

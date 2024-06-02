@@ -67,15 +67,21 @@
     </ul>
 
     <script>
-      function printMsg(msg) {
+      function printMsg(msg, num) {
         // TODO: 반복문을 사용해서 함수 내부 코드를 개선해주세요!
-        console.log(msg.toUpperCase());
-        console.log(msg.toUpperCase());
-        console.log(msg.toUpperCase());
+        msg = msg.toUpperCase();
+        //console.log(num);
+
+        for(i = 1; i <= num; i++){
+          console.log(msg, num);
+
+          // i == num 이나 i === num 이라고 하면 작동 안함
+          // i = num 이라고 하면 무한으로 난리남... ㅠㅠ
+        }
       }
 
       // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 printMsg 함수를 호출해주세요!
-      // printMsg('Wow!!', 5);
+      printMsg('Wow!!', 5);
     </script>
   </body>
 </html>

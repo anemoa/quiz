@@ -90,24 +90,54 @@
     <br />
 
     <script>
-      function drawStars() {
+      let txt = '*';
+
+      function drawStars(lines) {
         // TODO: drawStars() 함수 내부 코드를 채워주세요.
+        for(i = lines; i >= 1 ; i--){        
+          console.log(txt.repeat(i));
+        }
+
       }
 
-      function drawStars2() {
+      function drawStars2(lines) {
         // TODO: drawStars2() 함수 내부 코드를 채워주세요.
+        for(i = 1; i <= lines ; i++){        
+          console.log(" ".repeat(lines - i) + txt.repeat(i));
+        }
       }
 
-      function drawStars3() {
+      function drawStars3(lines) {
         // TODO: drawStars3() 함수 내부 코드를 채워주세요.
+
+        for(i = 1, j = 0; i <= lines; i++){
+          console.log(" ".repeat(lines - i) + txt.repeat(i + j));
+          j += 1;
+        }
+
+        // 검색으로 해결.. 여기서부터 이해 잘 안됨... ㅠㅠ
       }
 
-      function drawStars4() {
+      function drawStars4(lines) {
         // TODO: drawStars4() 함수 내부 코드를 채워주세요.
+        let split = Math.floor(lines / 2);
+
+        for(i = 0; i < lines; i++){
+          let full1 = Math.abs(split - i); // 빈칸을 채울 수 라고 한다
+          let full2 = split - full1; // *을 채울 수 라고 한다
+
+          console.log(' '.repeat(full1) + txt.repeat(full2 * 2 + 1));
+        }
+        // 여기도 검색으로 해결... 잘 모르겠다..ㅠㅠㅠㅠㅠㅠㅠㅠㅠ
       }
 
-      function drawStars5() {
+      function drawStars5(lines) {
         // TODO: drawStars5() 함수 내부 코드를 채워주세요.
+
+        for( i = 1; i <= lines; i++){
+          console.log(' '.repeat(lines - i) + txt.repeat(i * 2 - 1));
+        }
+
       }
 
       // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 drawStars ~ drawStars5 함수를 호출해주세요!
@@ -123,8 +153,8 @@
       // drawStars4(3);
       // drawStars4(5);
 
-      // drawStars5(3);
-      // drawStars5(5);
+      drawStars5(3);
+      drawStars5(5);
     </script>
   </body>
 </html>
